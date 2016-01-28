@@ -13,9 +13,17 @@ $(function() {
         var markup = "the current weather condition in Chicago is: " +
         data.currently.summary;
 
-        var temp="current temperature:" + data.currently.temperature;
+          var temp="current temperature in Chicago is:" +
+          data.currently.temperature;
 
-                var daily="daily weather report:" + data.daily.summary;
+                var daily="daily weather report in Chicago is:"  +
+                data.daily.summary;
+
+                      var hour="hourly weather report in Chicago is:" +
+                      data.hourly.summary;
+
+                      var humidity="humidity in Chicago is:" +
+                      data.currently.humidity;
 
     // var markup= "the hourly weather condition in Chicago is: " +
     // data.hourly.summary
@@ -25,6 +33,8 @@ $(function() {
     $('.weather-report').html(markup);
         $('.weather-temp').html(temp);
           $('.daily-weather').html(daily);
+              $('.hourly-weather').html(hour);
+                $('.weather-humidity').html(humidity);
   }
   $('a.get-the-weather').on('click', function(event) {
     event.preventDefault();
